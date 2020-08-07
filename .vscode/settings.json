@@ -1,4 +1,19 @@
+// {
+//     "editor.fontSize": 14,
+//     "editor.formatOnSave": true
+// }
 {
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "prettier.singleQuote": true,
+  "eslint.packageManager": "npm",
+  "javascript.format.semicolons": "remove",
+  "prettier.semi": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
