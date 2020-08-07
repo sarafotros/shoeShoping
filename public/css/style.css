@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Staatliches&display=swap'); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+body {
+  font-family: 'Staatliches', cursive;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  font-family: 'Staatliches', cursive;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #afb6d055;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #afb6d0;
+}
