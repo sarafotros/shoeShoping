@@ -9,15 +9,20 @@ export default makeStyles((theme) => ({
     paddingLeft: 5,
     width: 80,
     height: '100%',
-    // border: '1px #202d2a solid',
-    // boxShadow: '2px 3px 4px 0px #272b2b',
-    cursor: 'pointer',
-    transition: '0.5s',
+  },
+  topDiv: {
+    transition: '.5s',
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
     '&:hover': {
-      opacity: 0.7,
-      transition: '0.5s',
+      opacity: 0.5,
+      transition: '.5s',
     },
   },
+
   profileImg: {
     width: 38,
     borderColor: theme.palette.primary.main,
@@ -28,5 +33,15 @@ export default makeStyles((theme) => ({
   BottomIcon: {
     fontSize: 27,
     color: theme.palette.icon.shopIcon,
+  },
+  menuContent: {
+    width: 200,
+    backgroundColor: '#2d3844',
+    position: 'absolute',
+    top: 72,
+    borderRadius: 5,
+    padding: 15,
+    boxShadow: '0px 0px 1px 0px #57b0d6',
+    zIndex: 1,
   },
 }))

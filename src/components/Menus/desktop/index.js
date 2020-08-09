@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles from './index.styles'
 import { Button } from '@material-ui/core'
 import { Link, useLocation } from 'react-router-dom'
-import BrandLogo1 from '../../../assets/images/brand5.png'
+import BrandLogo1 from '../../../assets/images/bb4.png'
 import ProfileButton from './ProfileButton'
 import CartButton from './CartButton'
 
@@ -17,10 +17,7 @@ export default function Desktop() {
         <img className={classes.brandImg} src={BrandLogo1} alt="brand-logo" />
       </div>
       <div className={classes.menuDiv}>
-        <div
-          className={classes.activeMenuDiv}
-          className={path === '/' ? classes.activeMenuDiv : null}
-        >
+        <div className={path === '/' ? classes.activeMenuDiv : null}>
           <Button
             component={Link}
             to="/"
@@ -29,10 +26,7 @@ export default function Desktop() {
             HOME
           </Button>
         </div>
-        <div
-          className={classes.activeMenuDiv}
-          className={path === '/products' ? classes.activeMenuDiv : null}
-        >
+        <div className={path === '/products' ? classes.activeMenuDiv : null}>
           <Button
             component={Link}
             to="/products"
@@ -43,10 +37,7 @@ export default function Desktop() {
             PRODUCTS
           </Button>
         </div>
-        <div
-          className={classes.activeMenuDiv}
-          className={path === '/blog' ? classes.activeMenuDiv : null}
-        >
+        <div className={path === '/blog' ? classes.activeMenuDiv : null}>
           <Button
             component={Link}
             to="/blog"
@@ -57,10 +48,7 @@ export default function Desktop() {
             BLOG
           </Button>
         </div>
-        <div
-          className={classes.activeMenuDiv}
-          className={path === '/faq' ? classes.activeMenuDiv : null}
-        >
+        <div className={path === '/faq' ? classes.activeMenuDiv : null}>
           <Button
             component={Link}
             to="/faq"
@@ -71,10 +59,7 @@ export default function Desktop() {
             FAQ
           </Button>
         </div>
-        <div
-          className={classes.activeMenuDiv}
-          className={path === '/contact' ? classes.activeMenuDiv : null}
-        >
+        <div className={path === '/contact' ? classes.activeMenuDiv : null}>
           <Button
             component={Link}
             to="/contact"
