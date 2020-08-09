@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { Hidden, Button } from '@material-ui/core'
+import { Hidden } from '@material-ui/core'
 import useStyle from './MasterLayout.styles'
 import DesktopMenu from '../components/Menus/desktop'
 import MobileMenu from '../components/Menus/mobile'
@@ -17,12 +17,7 @@ export default function MasterLayout() {
         <Hidden smUp>
           <MobileMenu />
         </Hidden>
-        <Button variant="contained" color="primary">
-          click
-        </Button>
-        <Button variant="contained" color="secondary">
-          click
-        </Button>
+
         <Footer />
       </div>
     </BrowserRouter>
