@@ -30,7 +30,7 @@ export default makeStyles((theme) => ({
   },
   shopIcon: {
     fontSize: 32,
-    // color: theme.palette.icon.shopIcon,
+    color: theme.palette.icon.shopIcon,
   },
   badge: {
     width: 20,

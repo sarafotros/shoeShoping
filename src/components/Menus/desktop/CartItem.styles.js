@@ -12,8 +12,8 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
   },
   deleteIcon: {
-    width: 30,
-    marginBottom: 8,
+    width: 24,
+    marginBottom: 4,
   },
   shoesImg: {
     width: 60,
@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     width: '100%',
   },
   descDiv: {
-    marginLeft: 20,
+    marginLeft: 14,
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
@@ -39,6 +39,5 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // paddingBottom: 10,
   },
 }))
