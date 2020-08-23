@@ -31,9 +31,9 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  menuIcon: {
-    width: 40,
-    height: 40,
+  menuIconTop: {
+    width: 26,
+    height: 26,
   },
   brandIcon: {
     width: 140,

@@ -12,17 +12,17 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10,
+    padding: 16,
     borderBottomColor: theme.palette.border.drawerItemBorder,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
   },
   drawerLogo: {
-    width: 50,
-    height: 50,
+    width: 64,
+    height: 64,
   },
   menuIcon: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
   },
 }))
