@@ -13,8 +13,8 @@ import drawerLogo from '../../../assets/images/shoes.svg'
 import homeIcon from '../../../assets/images/home.svg'
 import productIcon from '../../../assets/images/search.svg'
 import blogIcon from '../../../assets/images/edit.svg'
-import faqIcon from '../../../assets/images/question.svg'
-import contactIcon from '../../../assets/images/chat.svg'
+import faqIcon from '../../../assets/images/chat.svg'
+import contactIcon from '../../../assets/images/phone.svg'
 import userIcon from '../../../assets/images/user.svg'
 
 export default function MenuItems() {
