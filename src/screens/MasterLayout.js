@@ -5,6 +5,7 @@ import useStyle from './MasterLayout.styles'
 import DesktopMenu from '../components/Menus/desktop'
 import MobileMenu from '../components/Menus/mobile'
 import Footer from '../components/Footer/index'
+import LoginModals from '../components/LoginModals'
 
 export default function MasterLayout() {
   const classes = useStyle()
@@ -20,6 +21,7 @@ export default function MasterLayout() {
 
         <Footer />
       </div>
+      <LoginModals />
     </BrowserRouter>
   )
 }
