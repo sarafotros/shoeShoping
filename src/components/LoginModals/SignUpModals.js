@@ -15,7 +15,7 @@ const SignUpModal = () => {
             classes={{ root: classes.inputContainer }}
             variant="outlined"
             fullWidth
-            size="medium"
+            size="small"
             // inputProps={{ className: classes.input }}
           />
         </Grid>
@@ -25,7 +25,7 @@ const SignUpModal = () => {
             classes={{ root: classes.inputContainer }}
             variant="outlined"
             fullWidth
-            size="medium"
+            size="small"
           />
         </Grid>
         <Grid className={classes.formGrid} item lg={6} xs={12}>
@@ -34,7 +34,7 @@ const SignUpModal = () => {
             classes={{ root: classes.inputContainer }}
             variant="outlined"
             fullWidth
-            size="medium"
+            size="small"
           />
         </Grid>
         <Grid className={classes.formGrid} item lg={6} xs={12}>
@@ -43,7 +43,7 @@ const SignUpModal = () => {
             classes={{ root: classes.inputContainer }}
             variant="outlined"
             fullWidth
-            size="medium"
+            size="small"
           />
         </Grid>
         <Grid className={classes.formGrid} item lg={12} xs={12}>
