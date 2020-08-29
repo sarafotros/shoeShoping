@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Modal from '@material-ui/core/Modal'
 import useStyles from './index.style'
 import { Button, Typography } from '@material-ui/core'
 import ReactCodeInput from 'react-code-input'
+import { LoginContext } from '../../contexts/LoginContext'
 
 const CodeModal = () => {
-  const [open, setOpen] = useState(true)
+  const { state, dispatch } = useContext(LoginContext)
   const [counter, setCounter] = useState(10)
   const classes = useStyles()
   useEffect(() => {
@@ -14,7 +15,7 @@ const CodeModal = () => {
     }, 1000)
   }, [])
   return (
-    <Modal open={open} onClose={() => setOpen(false)}>
+    <Modal open={state.code} onClose={() => dispatch({ type: 'closeAll' })}>
       <div className={classes.root}>
         <Typography variant="body2" className={classes.textType}>
           Enter the verification code You received

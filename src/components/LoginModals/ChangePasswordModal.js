@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Modal from '@material-ui/core/Modal'
 import useStyles from './index.style'
 import { TextField, Button } from '@material-ui/core'
+import { LoginContext } from '../../contexts/LoginContext'
 
 const ChangePasswordModal = () => {
-  const [open, setOpen] = useState(false)
+  const { state, dispatch } = useContext(LoginContext)
+
   const classes = useStyles()
   return (
-    <Modal open={open} onClose={() => setOpen(false)}>
+    <Modal
+      open={state.changePassword}
+      onClose={() => dispatch({ type: 'closeAll' })}
+    >
       <div className={classes.root}>
         <TextField
           label="New Password"

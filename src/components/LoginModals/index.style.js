@@ -82,4 +82,7 @@ export default makeStyles((theme) => ({
   buttonText: {
     fontSize: 12,
   },
+  sendCodeButton: {
+    marginTop: 15,
+  },
 }))
