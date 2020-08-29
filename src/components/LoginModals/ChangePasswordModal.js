@@ -3,22 +3,21 @@ import Modal from '@material-ui/core/Modal'
 import useStyles from './index.style'
 import { TextField, Button } from '@material-ui/core'
 
-const SignInModal = () => {
+const ChangePasswordModal = () => {
   const [open, setOpen] = useState(false)
   const classes = useStyles()
   return (
     <Modal open={open} onClose={() => setOpen(false)}>
       <div className={classes.root}>
         <TextField
-          label="Mobile Number"
+          label="New Password"
           classes={{ root: classes.inputContainer }}
           variant="outlined"
           fullWidth
           size="small"
-          // inputProps={{ className: classes.input }}
         />
         <TextField
-          label="Password"
+          label="Repeat Password"
           classes={{ root: classes.inputContainer }}
           variant="outlined"
           fullWidth
@@ -30,7 +29,7 @@ const SignInModal = () => {
           variant="outlined"
           color="primary"
         >
-          Sign In
+          Rest Password
         </Button>
         <Button
           className={classes.buttonTwo}
@@ -39,19 +38,10 @@ const SignInModal = () => {
           color="primary"
           classes={{ label: classes.btnLabel }}
         >
-          Forgot Password
-        </Button>
-        <Button
-          className={classes.buttonTwo}
-          fullWidth
-          variant="text"
-          color="primary"
-          classes={{ label: classes.btnLabel }}
-        >
-          New here? Create Account
+          Back to Login
         </Button>
       </div>
     </Modal>
   )
 }
-export default SignInModal
+export default ChangePasswordModal

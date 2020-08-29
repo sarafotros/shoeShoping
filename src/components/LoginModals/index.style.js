@@ -20,12 +20,16 @@ export default makeStyles((theme) => ({
     backgroundColor: '#1a222a',
     margin: 'auto',
     marginTop: 80,
-    padding: 20,
+    padding: 25,
     outline: 'none',
+    '&:focus': {
+      outline: 'none',
+    },
     borderRadius: 4,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+
     [theme.breakpoints.down('xs')]: {
       width: '80%',
     },
@@ -39,8 +43,8 @@ export default makeStyles((theme) => ({
     marginBottom: 10,
   },
   formGrid: {
-    paddingLeft: 25,
-    paddingLeft: 15,
+    paddingRight: 7,
+    paddingLeft: 7,
     [theme.breakpoints.down('xs')]: {
       padding: 0,
     },
@@ -54,5 +58,28 @@ export default makeStyles((theme) => ({
   },
   btnLabel: {
     justifyContent: 'left',
+  },
+  codeDiv: {
+    display: 'flex',
+    msFlexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 15,
+  },
+  counterText: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 15,
+    fontSize: 12,
+    color: '#b3aeae',
+  },
+  textType: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 15,
+    color: '#b3aeae',
+  },
+  buttonText: {
+    fontSize: 12,
   },
 }))
