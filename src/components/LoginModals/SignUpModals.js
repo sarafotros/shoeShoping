@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
-import Modal from '@material-ui/core/Modal'
+import React, { useContext } from 'react'
 import useStyles from './index.style'
-import { TextField, Button, Grid } from '@material-ui/core'
+import { TextField, Button, Grid, Modal } from '@material-ui/core'
+import { LoginContext } from '../../contexts/LoginContext'
+import { SIGNIN, CODE } from '../../constants/ActionTypes'
 
 const SignUpModal = () => {
-  const [open, setOpen] = useState(false)
+  const { state, dispatch } = useContext(LoginContext)
   const classes = useStyles()
+
   return (
-    <Modal open={open} onClose={() => setOpen(false)}>
+    <Modal open={state.signUp} onClose={() => dispatch({ type: 'closeAll' })}>
       <div className={classes.rootSignUp}>
         <Grid className={classes.formGrid} item lg={6} xs={12}>
           <TextField

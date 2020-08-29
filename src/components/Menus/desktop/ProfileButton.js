@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Avatar from '../../../assets/images/user.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import useStyles from './ProfileButton.styles'
 import { Button, Fade } from '@material-ui/core'
+import { LoginContext } from '../../../contexts/LoginContext'
+import { SIGNUP, SIGNIN } from '../../../constants/ActionTypes'
 
 const ProfileButton = () => {
+  const { dispatch } = useContext(LoginContext)
   const classes = useStyles()
   const [open, setOpen] = useState(false)
+
   return (
     <div className={classes.root}>
       <div className={classes.topDiv} onClick={() => setOpen(!open)}>
@@ -37,10 +41,23 @@ const ProfileButton = () => {
                 color="primary"
                 size="medium"
                 fullWidth
+                onClick={() => {
+                  setOpen(false)
+                  dispatch({ type: SIGNIN })
+                }}
               >
                 Sign In
               </Button>
-              <Button variant="text" color="primary" size="medium" fullWidth>
+              <Button
+                variant="text"
+                color="primary"
+                size="medium"
+                fullWidth
+                onClick={() => {
+                  setOpen(false)
+                  dispatch({ type: SIGNUP })
+                }}
+              >
                 Sign Up
               </Button>
             </>
