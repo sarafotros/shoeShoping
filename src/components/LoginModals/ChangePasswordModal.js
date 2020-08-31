@@ -3,6 +3,7 @@ import Modal from '@material-ui/core/Modal'
 import useStyles from './index.style'
 import { TextField, Button } from '@material-ui/core'
 import { LoginContext } from '../../contexts/LoginContext'
+import { SIGNIN } from '../../constants/ActionTypes'
 
 const ChangePasswordModal = () => {
   const { state, dispatch } = useContext(LoginContext)
@@ -42,6 +43,7 @@ const ChangePasswordModal = () => {
           variant="text"
           color="primary"
           classes={{ label: classes.btnLabel }}
+          onClick={() => dispatch({ type: SIGNIN })}
         >
           Back to Login
         </Button>

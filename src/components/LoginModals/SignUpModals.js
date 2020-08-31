@@ -8,6 +8,10 @@ const SignUpModal = () => {
   const { state, dispatch } = useContext(LoginContext)
   const classes = useStyles()
 
+  const signUp = () => {
+    dispatch({ type: CODE })
+  }
+
   return (
     <Modal open={state.signUp} onClose={() => dispatch({ type: 'closeAll' })}>
       <div className={classes.rootSignUp}>
@@ -54,6 +58,7 @@ const SignUpModal = () => {
             fullWidth
             variant="outlined"
             color="primary"
+            onClick={signUp}
           >
             Sign Up
           </Button>
@@ -65,6 +70,7 @@ const SignUpModal = () => {
             variant="text"
             color="primary"
             classes={{ label: classes.btnLabel }}
+            onClick={() => dispatch({ type: SIGNIN })}
           >
             Welcome Back! Please Sign In
           </Button>

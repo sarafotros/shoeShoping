@@ -17,7 +17,7 @@ export { LoginContext }
 export default function LoginContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, {
     signIn: false,
-    signup: false,
+    signUp: false,
     code: false,
     forgetPassword: false,
     changePassword: false,

@@ -41,6 +41,7 @@ const SignInModal = () => {
           variant="text"
           color="primary"
           classes={{ label: classes.btnLabel }}
+          onClick={() => dispatch({ type: FORGET_PASSWORD })}
         >
           Forgot Password
         </Button>
@@ -50,6 +51,7 @@ const SignInModal = () => {
           variant="text"
           color="primary"
           classes={{ label: classes.btnLabel }}
+          onClick={() => dispatch({ type: SIGNUP })}
         >
           New here? Create Account
         </Button>
