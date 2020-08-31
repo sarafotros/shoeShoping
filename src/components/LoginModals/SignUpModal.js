@@ -9,6 +9,7 @@ const SignUpModal = () => {
   const classes = useStyles()
 
   const signUp = () => {
+    localStorage.setItem('loginCodeType', 'signUp')
     dispatch({ type: CODE })
   }
 

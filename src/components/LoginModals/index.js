@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SignInModal from './SignInModal'
-import SignUpModals from './SignUpModals'
+import SignUpModal from './SignUpModal'
 import CodeModal from './CodeModal'
 import ForgetPasswordModal from './ForgetPasswordModal'
 import ChangePasswordModal from './ChangePasswordModal'
+import { LoginContext } from '../../contexts/LoginContext'
 
-const index = () => {
+const Index = () => {
+  const { state } = useContext(LoginContext)
+
   return (
     <>
-      <SignInModal />
-      <SignUpModals />
-      <ForgetPasswordModal />
-      <ChangePasswordModal />
-      <CodeModal />
+      {state.signIn ? <SignInModal /> : null}
+      {state.signUp ? <SignUpModal /> : null}
+      {state.forgetPassword ? <ForgetPasswordModal /> : null}
+      {state.changePassword ? <ChangePasswordModal /> : null}
+      {state.code ? <CodeModal /> : null}
     </>
   )
 }
 
-export default index
+export default Index

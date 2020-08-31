@@ -9,6 +9,7 @@ const ForgetPasswordModal = () => {
   const { state, dispatch } = useContext(LoginContext)
   const classes = useStyles()
   const forgetPassword = () => {
+    localStorage.setItem('loginCodeType', 'forgetPassword')
     dispatch({ type: CODE })
   }
   return (
