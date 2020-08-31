@@ -6,6 +6,7 @@ import DesktopMenu from '../components/Menus/desktop'
 import MobileMenu from '../components/Menus/mobile'
 import Footer from '../components/Footer/index'
 import LoginModals from '../components/LoginModals'
+import Routes from '../routes'
 
 export default function MasterLayout() {
   const classes = useStyle()
@@ -18,7 +19,7 @@ export default function MasterLayout() {
         <Hidden smUp>
           <MobileMenu />
         </Hidden>
-
+        <Routes />
         <Footer />
       </div>
       <LoginModals />
