@@ -4,16 +4,38 @@ import useStyles from './index.style'
 import { Button, Typography } from '@material-ui/core'
 import ReactCodeInput from 'react-code-input'
 import { LoginContext } from '../../contexts/LoginContext'
+import {
+  SIGNUP,
+  SIGNIN,
+  FORGET_PASSWORD,
+  CHANGE_PASSWORD,
+} from '../../constants/ActionTypes'
 
 const CodeModal = () => {
   const { state, dispatch } = useContext(LoginContext)
-  const [counter, setCounter] = useState(10)
+  const [counter, setCounter] = useState(20)
   const classes = useStyles()
+  let codeType = localStorage.getItem('loginCodeType')
+
   useEffect(() => {
     setInterval(() => {
       setCounter((oldCounter) => (oldCounter === 0 ? 0 : oldCounter - 1))
     }, 1000)
   }, [])
+
+  const checkCode = () => {
+    if (codeType === 'signUp') {
+      //
+    } else {
+      dispatch({ type: CHANGE_PASSWORD })
+    }
+  }
+
+  const sendCodeAgain = () => {
+    //
+    setCounter(20)
+  }
+
   return (
     <Modal open={state.code} onClose={() => dispatch({ type: 'closeAll' })}>
       <div className={classes.root}>
@@ -45,6 +67,7 @@ const CodeModal = () => {
             fullWidth
             color="primary"
             className={classes.sendCodeButton}
+            onClick={sendCodeAgain}
           >
             <Typography variant="body2" className={classes.buttonText}>
               resend verification code again?
@@ -53,12 +76,14 @@ const CodeModal = () => {
         )}
 
         <Button
+          disabled={counter === 0}
           className={classes.button}
           fullWidth
           variant="outlined"
           color="primary"
+          onClick={checkCode}
         >
-          Verify the Code
+          Submit the Code
         </Button>
         <Button
           className={classes.buttonTwo}
@@ -66,6 +91,9 @@ const CodeModal = () => {
           variant="text"
           color="primary"
           classes={{ label: classes.btnLabel }}
+          onClick={() => {
+            dispatch({ type: codeType === 'signUp' ? SIGNUP : FORGET_PASSWORD })
+          }}
         >
           Edit Phone Number
         </Button>
@@ -75,6 +103,7 @@ const CodeModal = () => {
           variant="text"
           color="primary"
           classes={{ label: classes.btnLabel }}
+          onClick={() => dispatch({ type: SIGNIN })}
         >
           Back to Login
         </Button>
