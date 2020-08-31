@@ -9,9 +9,9 @@ export default makeStyles((theme) => ({
     },
   },
   item: {
-    paddingRight: 40,
+    paddingLeft: 40,
     [theme.breakpoints.down('xs')]: {
-      paddingRight: 10,
+      paddingLeft: 10,
       marginTop: 10,
       marginBottom: 10,
       paddingBottom: 5,

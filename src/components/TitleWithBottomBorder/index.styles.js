@@ -9,7 +9,7 @@ export default makeStyles(() => ({
     '&:after': {
       content: "''",
       position: 'absolute',
-      width: 80,
+      width: 96,
       height: 4,
       bottom: 0,
       borderRadius: 4,
